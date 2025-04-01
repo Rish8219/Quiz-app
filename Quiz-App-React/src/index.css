@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+#disabled {
+    background-color: aliceblue;
+    color: Black;
+    cursor:not-allowed;
+}
+
+#enabled {
+    background-color: orange;
+    color: Black;
+    cursor: pointer;
+}
+
+#tenable {
+    background-color: rgb(255, 190, 0);
+    transform: scale(1.1);
+    padding: 2%;
+    margin-left: 7%;
+    width: 90%;
+    /* text-align: center; */
+
+}
