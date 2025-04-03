@@ -99,21 +99,6 @@ function Quiz() {
     setCancel(false)
     setSelectedAnswer(null)
   }
-  // return (
-  //   <div className='bg-[#97866A] h-screen'>
-  //     <div className='container '>
-  //       <h1 className='text-4xl text-black text-center py-10' >Your Score:{score}</h1>
-  //       <div className="flex-col justify-items-center justify-self-center mt-3 rounded-2xl bg-[#F5EEDC] w-1/3 h-11/13 p-2 content-center">
-  //         <Questions question={dataBase[data].question} answers={dataBase[data].answers} data={data} handleClick={handleClick} selectedAnswer={selectedAnswer} score={score} dataBox={dataBase} quizFinished={quizFinished} />
-  //         <button disabled={selectedAnswer == null} id={selectedAnswer ? "enabled" : "disabled"} className='text-xl border-0 outline-0 mt-15 w-25 p-3 rounded-2xl' onClick={handleButton}>Next </button>
-  //         {hide >= 2 ? <button className=' border-none outline-0 mt-5 w-25 p-3 rounded-2xl bg-green-400 text-xl ml-2 cursor-pointer' onClick={handleShowBtn}>Show</button> : ""}
-  //         {cancel ? <button className=' border-none outline-0 mt-5  w-25 p-3 rounded-2xl bg-red-400 text-xl ml-2 cursor-pointer' onClick={handleBackButton}>Cancel</button> : ""}
-
-  //       </div>
-  //     </div>
-  //   </div>
-  // )
-
 
 
   return (
