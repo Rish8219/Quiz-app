@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Questions = ({ question, answers, data, handleClick, selectedAnswer, score, dataBox }) => {
+const Questions = ({ question, answers, data, handleClick, selectedAnswer, score, dataBox,quizFinished }) => {
     console.log(dataBox.length-1);
     console.log(data);
 
@@ -10,7 +10,7 @@ const Questions = ({ question, answers, data, handleClick, selectedAnswer, score
         <div >
             {
 
-                data > dataBox.length-1 ? <div><h1>Your Score : {score}</h1></div> :
+// quizFinished? <div><h1>Your Score : {score} out of </h1></div> :
                     <div>
                         <h2 className='text-4xl '>  Q.{data + 1} {question}</h2>
                         <ul>
