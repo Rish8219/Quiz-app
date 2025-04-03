@@ -10,7 +10,7 @@ const Questions = ({ question, answers, data, handleClick, selectedAnswer, score
         <div >
             {
 
-// quizFinished? <div><h1>Your Score : {score} out of </h1></div> :
+
                     <div>
                         <h2 className='text-4xl '>  Q.{data + 1} {question}</h2>
                         <ul>
