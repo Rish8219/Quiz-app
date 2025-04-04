@@ -10,7 +10,6 @@ const Questions = ({ question, answers, data, handleClick, selectedAnswer, score
 
         <div >
 
-<<<<<<< HEAD
             <div>
                 <h2 className='text-4xl text-wrap '>  Q.{data + 1} {question}</h2>
                 <ul>
@@ -24,22 +23,6 @@ const Questions = ({ question, answers, data, handleClick, selectedAnswer, score
                 </ul>
             </div>
 
-=======
-
-                    <div>
-                        <h2 className='text-4xl '>  Q.{data + 1} {question}</h2>
-                        <ul>
-                            {
-                                answers.map((answer, index) => {
-                                    return (
-                                        <li className='cursor-pointer mt-7 text-2xl bg-amber-200 rounded-2xl px-4 hover:bg-amber-400 ' id={selectedAnswer == answer ? "tenable" : ""} onClick={(e) => handleClick(e, answer)} key={index}>{answer}</li>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </div>
-            }
->>>>>>> 295d9be5fa9360a35bc350fc0026edac675a7e10
 
         </div>
     );
