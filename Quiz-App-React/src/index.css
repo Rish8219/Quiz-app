@@ -7,13 +7,13 @@
 }
 
 #enabled {
-    background-color: orange; 
+    background-color: orange;
     color: Black;
     cursor: pointer;
 }
 
 #tenable {
-    background-color:#63b3ed;
+    background-color: #63b3ed;
     transform: scale(1.1);
     color: Black;
     padding: 2%;
@@ -27,12 +27,9 @@
     user-select: none;
     -webkit-backdrop-filter: blur(1000px);
     backdrop-filter: blur(1000px);
-    background: rgba(45, 55, 72,0.8);
+    background: rgba(45, 55, 72, 0.8);
     color: white;
-    -webkit-box-shadow: -40px 19px 22px -1px rgba(0,0,0,0.38);
--moz-box-shadow: -40px 19px 22px -1px rgba(0,0,0,0.38);
-box-shadow: -40px 19px 22px -1px rgba(0,0,0,0.38);
-    /* cursor: pointer; */
-
-
+    -webkit-box-shadow: -40px 19px 22px -1px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: -40px 19px 22px -1px rgba(0, 0, 0, 0.38);
+    box-shadow: -40px 19px 22px -1px rgba(0, 0, 0, 0.38);
 }

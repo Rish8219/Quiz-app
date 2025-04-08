@@ -9,7 +9,6 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-
     const [data, setData] = useState({
         name: "",
         email: "",
@@ -28,7 +27,37 @@ const Signup = () => {
                     email,
                     password
                 });
-                localStorage.setItem("userData", JSON.stringify(data));
+                //set localStorage as an array of objects
+                const existingData = JSON.parse(localStorage.getItem("userData")) || [];
+                const newUser = {
+                    name: name,
+                    email: email,
+                    password: password,
+                };
+                // Check if the user already exists
+                const userExists = existingData.some(user => user.email === email);
+                console.log(userExists);
+                // If user already exists, show error message
+                if (userExists) {
+                    toast.error("User already exists", {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        theme: "light",
+                    });
+                    return;
+                }
+                // If user doesn't exist, add the new user to the array
+
+                existingData.push(newUser);
+
+                // localStorage.setItem("userData", JSON.stringify(data));
+
+                localStorage.setItem("userData", JSON.stringify(existingData));
+
                 setName("");
                 setEmail("");
                 setPassword("");
@@ -39,6 +68,7 @@ const Signup = () => {
                     autoClose: 2000,
                     theme: "light",
                 });
+                navigate("/login")
             }
             else {
                 toast.error("Password and Confirm Password do not match", {

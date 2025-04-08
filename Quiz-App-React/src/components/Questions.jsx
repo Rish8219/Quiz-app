@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Questions = ({ question, answers, data, handleClick, selectedAnswer, score, dataBox, quizFinished }) => {
-    console.log(dataBox.length - 1);
-    console.log(data);
+const Questions = ({ question, answers, data, handleClick, selectedAnswer }) => {
+    
     let alphabet = ["A", "B", "C", "D"]
 
 

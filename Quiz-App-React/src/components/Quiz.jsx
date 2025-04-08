@@ -102,7 +102,7 @@ function Quiz() {
 
 
   return (
-    <div className=' bg-gradient-to-r from-blue-500 to-purple-500 h-screen'>
+    <div className=' bg-gradient-to-r from-blue-500 to-purple-500 h-166.5'>
       <div className='container '>
         {quizFinished ? (
           <div className="flex-col justify-items-center justify-self-center p-40 rounded-2xl content-center">
@@ -122,9 +122,9 @@ function Quiz() {
 
         ) : (
           <div className='flex-col justify-items-center'>
-            <h1 className='select-none text-5xl text-white text-center font-bold py-5'>Your Score: {score}</h1>
-            <div className="glasseffect flex-col justify-items-center mt-3 rounded-2xl  w-1/1 h-auto p-2 content-center">
-              <Questions question={dataBase[data].question} answers={dataBase[data].answers} data={data} handleClick={handleClick} selectedAnswer={selectedAnswer} score={score} dataBox={dataBase} quizFinished={quizFinished} />
+            <h1 className='select-none text-5xl text-white text-center font-bold py-4'>Your Score: {score}</h1>
+            <div className="glasseffect flex-col justify-items-center mt-2 rounded-2xl  w-95 h-auto p-2 content-center">
+              <Questions question={dataBase[data].question} answers={dataBase[data].answers} data={data} handleClick={handleClick} selectedAnswer={selectedAnswer} />
               <button disabled={selectedAnswer == null} className={selectedAnswer == null ? "disabled text-xl ml-2 bg-gray-500 cursor-no-drop border-0 outline-0 mt-15 w-25 p-3 rounded-2xl" : 'text-xl bg-blue-400 border-0 outline-0 mt-15 ml-2 w-25 p-3 cursor-pointer rounded-2xl'} onClick={handleButton}>
                 Next
               </button>

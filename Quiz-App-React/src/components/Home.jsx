@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
     const navigate = useNavigate();
   return (
-    <div className="w-full select-none h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+    <div className="w-full select-none h-166.5 flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500 text-white">
      
       <div className="text-center px-6">
         <h1 className="text-5xl font-bold">Test Your Knowledge!</h1>

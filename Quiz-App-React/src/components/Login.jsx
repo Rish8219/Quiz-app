@@ -9,12 +9,16 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const [userData, setUserData] = useState(null)
     const [data, setData] = useState({
         email: "",
         password: "",
     });
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
     useEffect(() => {
-        console.log("userData is", data);
+        const Data = JSON.parse(localStorage.getItem("userData"))
+        console.log("Data is", Data);
+        setUserData(Data)
     }, [data])
 
     const handleClick = (e) => {
@@ -24,11 +28,27 @@ const Login = () => {
                 email,
                 password
             });
-            toast.success("Login successful!", {
-                position: "top-center",
-                autoClose: 2000,
-                theme: "light",
-            });
+            const checkUser = userData.some(user => user.email === email && user.password === password)
+           
+            if (checkUser) {
+           //set current data to local storage
+           localStorage.setItem("user", JSON.stringify(userData.filter(user => user.email === email && user.password ===password)));
+
+                navigate("/")
+
+                toast.success("Login successful!", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    theme: "light",
+                });
+            }
+            else {
+                toast.error("Invalid email or password", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    theme: "light",
+                });
+            }
         } else {
             toast.error("Please fill all the fields", {
                 position: "top-center",
